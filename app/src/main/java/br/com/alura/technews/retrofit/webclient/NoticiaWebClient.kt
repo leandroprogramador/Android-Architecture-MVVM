@@ -44,6 +44,9 @@ class NoticiaWebClient(
         )
     }
 
+    fun salva(noticia: Noticia) : Noticia?{
+        return service.salva(noticia).execute().body()
+    }
     fun salva(
         noticia: Noticia,
         quandoSucesso: (noticiasNovas: Noticia?) -> Unit,
